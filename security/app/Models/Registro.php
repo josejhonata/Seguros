@@ -9,7 +9,7 @@ class Registro extends Model
 {
     use HasFactory;
 
-    public class users(){
+    public function users(){
     	$this->belongTo(User::class);
     }
 }
