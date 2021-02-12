@@ -17,7 +17,7 @@ class CreateRegistrosTable extends Migration
             $table->id();
             $table->string('local');
             $table->string('data');
-            $table->integer('valor');
+            $table->decimal('valor');
             $table->integer('user_id');
             $table->timestamps();
         });
