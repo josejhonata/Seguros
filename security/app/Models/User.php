@@ -40,4 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public class carro(){
+        $this->hasMany(Carro::class);
+    }
+
+    public class registro(){
+        $this->hasMany(Registro::class);
+    }
 }
