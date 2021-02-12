@@ -41,11 +41,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public class carro(){
+    public function carro(){
         $this->hasMany(Carro::class);
     }
 
-    public class registro(){
+    public function registro(){
         $this->hasMany(Registro::class);
     }
 }
