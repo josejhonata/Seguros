@@ -19,6 +19,33 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
+            <!-- CPF -->
+            <div>
+                <x-label for="cpf" :value="__('CPF')" />
+
+                <x-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required/>
+            </div>
+
+            <!-- Numero da carteira -->
+            <div>
+                <x-label for="numero_da_carteira" :value="__('Numero da carteira')" />
+
+                <x-input id="numero_da_carteira" class="block mt-1 w-full" type="text" name="numero_da_carteira" :value="old('numero_da_carteira')" required/>
+            </div>
+
+            <!-- Cep -->
+            <div>
+                <x-label for="cep" :value="__('Cep')" />
+
+                <x-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required/>
+            </div>
+
+            <!-- Name -->
+            <div>
+
+                <x-input id="tipo" class="block mt-1 w-full" type="hidden" name="tipo" :value="'cliente'"/>
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />

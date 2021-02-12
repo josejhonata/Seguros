@@ -34,12 +34,20 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'cpf'=> 'required',
+            'numero_da_carteira'=> 'required',
+            'cep' => 'required',
+            'tipo' => 'required',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
         ]);
 
         Auth::login($user = User::create([
             'name' => $request->name,
+            'cpf' => $request->cpf,
+            'numero_da_carteira' => $request->numero_da_carteira,
+            'cep' => $request->cep,
+            'tipo' => $request->tipo,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]));
