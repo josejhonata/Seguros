@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Carro extends Model
 {
     use HasFactory;
+
+    public class users(){
+    	$this->belongTo(User::class);
+    }
 }
