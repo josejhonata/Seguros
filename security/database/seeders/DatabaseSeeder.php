@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+         \App\Models\User::factory(5)->create(['tipo'=>'atendente']);
+
+         \App\Models\User::factory(5)->create(['tipo'=>'cliente']);
+
+         $this->call([
+         	CarroSeeder::class,
+         	RegistroSeeder::class,
+         ]);
     }
 }
