@@ -46,10 +46,10 @@ class User extends Authenticatable
     ];
 
     public function carro(){
-        $this->hasMany(Carro::class);
+      return  $this->hasMany(Carro::class);
     }
 
     public function registro(){
-        $this->hasMany(Registro::class);
+       return $this->hasMany(Registro::class);
     }
 }
