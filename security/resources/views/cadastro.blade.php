@@ -26,6 +26,7 @@ $Clientes=App\Models\User::where('tipo','cliente')->get();
         <th>Cpf</th>
         <th>Numero da carteira de motorista</th>
         <th>Cep</th>
+        
     </tr>
 </thead>
 <tbody>
@@ -38,6 +39,7 @@ $Clientes=App\Models\User::where('tipo','cliente')->get();
    <td>{{$cliente->cpf}}</td>
    <td>{{$cliente->numero_da_carteira}}</td>
    <td>{{$cliente->cep}}</td>
+  
 </tr>
 @endforeach
 

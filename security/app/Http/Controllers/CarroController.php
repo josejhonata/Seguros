@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carro;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class CarroController extends Controller
 {
@@ -93,6 +94,8 @@ class CarroController extends Controller
      */
     public function destroy(Carro $carro)
     {
-        //
+        $carro->delete();
+
+        return redirect('/dashboard');
     }
 }

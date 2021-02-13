@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarroController;
 use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,13 @@ Route::get('/dashboard', function () {
 Route::get('/cadastro', function () {
     return view('cadastro');
 })->middleware(['auth'])->name('cadastro');
+
+
+Route::get('/dashboard/delete/{carro}',[CarroController::class, 'destroy'])->name('rm-carro');
+
+
+Route::get('/delete/{registro}',[RegistroController::class, 'destroy'])->name('rm-registro');
+
 
 Route::post('/carro',[CarroController::class, 'store'])->name('add-carro');
 Route::post('/registro',[RegistroController::class, 'store'])->name('add-registro');

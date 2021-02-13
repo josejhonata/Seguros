@@ -36,6 +36,7 @@
                          <th>Cor do carro</th>
                          <th>Modelo do carro</th>
                          <th>Ano do carro</th>
+                         <th>Opções</th>
                      </tr>
 
                      </thead>
@@ -47,6 +48,7 @@
                         <td>{{$carro->cor}}</td>
                         <td>{{$carro->modelo}}</td>
                         <td>{{$carro->ano}}</td>
+                        <td><td><a class="bg-red-200 rounded hover:bg-red-300" href="{{ route('rm-carro', $carro ?? '')}}">Excluir</a></td></td>
                     </tr>
                     @endforeach
                     </tbody>
@@ -63,6 +65,7 @@
                             <th>Local do acidente</th>
                             <th>Data do acidente</th>
                             <th>Valor do prejuizo</th>
+                            <th>Opçṍes</th>
                         </tr>
                     </thead>
 
@@ -72,6 +75,7 @@
                             <td>{{$registro->local}}</td>
                             <td>{{$registro->data}}</td>
                             <td>{{$registro->valor}}</td>
+                            <td><a class="bg-red-200 rounded hover:bg-red-300" href="{{ route('rm-registro', $registro ?? '')}}">Excluir</a></td>
                         </tr>
                         @endforeach
                     </tbody>
