@@ -35,7 +35,21 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $request->validate([
+            'local' => 'required',
+            'data'=> 'required',
+            'valor'=> 'required',
+            'user_id' => 'required',
+        ]);
+
+           Registro::create([
+            'local'=> $request->local,
+            'data' => $request->data,
+            'valor'=> $request->valor,
+            'user_id' => $request->user_id,
+           ]);
+
+           return redirect('/cadastro');
     }
 
     /**

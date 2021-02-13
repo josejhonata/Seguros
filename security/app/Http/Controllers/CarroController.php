@@ -35,7 +35,20 @@ class CarroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'cor' => 'required',
+            'modelo'=> 'required',
+            'ano'=> 'required',
+            'user_id' => 'required',
+        ]);
+
+           Carro::create([
+            'cor'=> $request->input('cor'),
+            'modelo' => $request->input('modelo'),
+            'ano'=> $request->input('ano'),
+            'user_id' => $request->input('user_id'),
+           ]);
+           return redirect('/cadastro');
     }
 
     /**

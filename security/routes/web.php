@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarroController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/cadastro', function () {
+    return view('cadastro');
+})->middleware(['auth'])->name('cadastro');
+
+Route::post('/carro',[CarroController::class, 'store'])->name('add-carro');
+Route::post('/registro',[RegistroController::class, 'store'])->name('add-registro');
 require __DIR__.'/auth.php';
